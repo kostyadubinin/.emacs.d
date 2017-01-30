@@ -11,6 +11,8 @@
 
 (scroll-bar-mode -1)
 
+(setq js-indent-level 2)
+
 (add-to-list 'default-frame-alist '(width  . 162))
 (add-to-list 'default-frame-alist '(height . 52	))
 
@@ -74,7 +76,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit))))
+    (typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
