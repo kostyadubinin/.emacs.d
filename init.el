@@ -4,38 +4,42 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(require 'package)
+(require 'flymake-ruby)
+(require 'flymake-haml)
+
 (setq-default fill-column 80)
 
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'control)
+(setq js-indent-level 2)
+(setq column-number-mode t)
+(setq backup-inhibited t)    ; disable backup
+(setq auto-save-default nil) ; disable auto save
+
+(global-set-key (kbd "C-x C-b") 'bs-show)
+(global-set-key (kbd "M-i") 'other-window)
+(global-set-key (kbd "M-p") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
 (scroll-bar-mode -1)
-
-(setq js-indent-level 2)
+(icomplete-mode 99)
+(savehist-mode 1)
+(global-undo-tree-mode)
 
 (add-to-list 'default-frame-alist '(width  . 162))
 (add-to-list 'default-frame-alist '(height . 52	))
-
-(setq column-number-mode t)
-
-(global-set-key (kbd "C-x C-b") 'bs-show)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (add-hook 'prog-mode-hook 'subword-mode)
-
-(savehist-mode 1)
-
-(icomplete-mode 99)
-
-(global-set-key (kbd "M-i") 'other-window)
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-;disable backup
-(setq backup-inhibited t)
-;disable auto save
-(setq auto-save-default nil)
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
+(add-hook 'haml-mode-hook 'flymake-haml-load)
+(add-hook 'ruby-mode-hook #'rubocop-mode)
 
 (add-hook 'dired-load-hook
 	  (lambda ()
@@ -50,25 +54,6 @@
 	    ;; (dired-omit-mode 1)
 	    ))
 
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-
-(global-set-key (kbd "M-p") 'avy-goto-word-or-subword-1)
-
-(global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
-
-(global-undo-tree-mode)
-
-(require 'flymake-ruby)
-(add-hook 'ruby-mode-hook 'flymake-ruby-load)
-
-(require 'flymake-haml)
-(add-hook 'haml-mode-hook 'flymake-haml-load)
-
-(add-hook 'ruby-mode-hook #'rubocop-mode)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,10 +62,3 @@
  '(package-selected-packages
    (quote
     (typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit))))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
