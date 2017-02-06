@@ -1,12 +1,9 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
 (require 'package)
-(require 'flymake-ruby)
-(require 'flymake-haml)
+
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+(package-initialize)
 
 (setq-default fill-column 80)
 
@@ -34,6 +31,9 @@
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+(require 'flymake-ruby)
+(require 'flymake-haml)
 
 (add-hook 'prog-mode-hook 'subword-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
