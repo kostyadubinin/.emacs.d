@@ -1,3 +1,5 @@
+; brew install aspell --with-all-langs
+
 (require 'package)
 
 (add-to-list 'package-archives
