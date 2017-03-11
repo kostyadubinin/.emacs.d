@@ -1,4 +1,4 @@
-; brew install aspell --with-all-langs
+; packages to install: undo-tree, flymake-ruby, flymake-haml, magit
 
 (require 'package)
 
@@ -64,3 +64,9 @@
  '(package-selected-packages
    (quote
     (typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
