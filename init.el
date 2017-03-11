@@ -1,4 +1,8 @@
-; packages to install: undo-tree, flymake-ruby, flymake-haml, magit
+;; packages to install:
+;;   undo-tree
+;;   flymake-ruby
+;;   flymake-haml
+;;   magit
 
 (require 'package)
 
