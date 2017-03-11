@@ -3,7 +3,7 @@
 ;;   flymake-ruby
 ;;   flymake-haml
 ;;   magit
-
+;;
 (require 'package)
 
 (add-to-list 'package-archives
