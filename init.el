@@ -3,6 +3,7 @@
 ;;   flymake-ruby
 ;;   flymake-haml
 ;;   magit
+;;   go-mode
 ;;
 (require 'package)
 
@@ -67,7 +68,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit))))
+    (go-mode typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
