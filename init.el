@@ -17,6 +17,7 @@
  '(custom-safe-themes
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(gofmt-command "goimports")
  '(package-selected-packages
    (quote
     (solarized-theme go-mode typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit))))
@@ -75,3 +76,8 @@
 	    ;; Set dired-x buffer-local variables here.  For example:
 	    ;; (dired-omit-mode 1)
 	    ))
+
+(add-hook 'before-save-hook #'gofmt-before-save)
+
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "M-.") #'godef-jump)))
