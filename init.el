@@ -20,7 +20,7 @@
  '(gofmt-command "goimports")
  '(package-selected-packages
    (quote
-    (solarized-theme go-mode typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit)))
+    (flymake-cursor solarized-theme go-mode typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -84,3 +84,4 @@
                           (local-set-key (kbd "M-.") #'godef-jump)))
 
 (setq inhibit-splash-screen t)
+(eval-after-load 'flymake '(require 'flymake-cursor))
