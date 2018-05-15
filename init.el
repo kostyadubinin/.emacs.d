@@ -39,6 +39,7 @@
 (setq column-number-mode t)
 (setq backup-inhibited t)    ; disable backup
 (setq auto-save-default nil) ; disable auto save
+(setq dired-listing-switches "-alh")
 
 (global-set-key (kbd "C-x C-b") 'bs-show)
 (global-set-key (kbd "M-i") 'other-window)
