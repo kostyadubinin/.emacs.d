@@ -1,5 +1,4 @@
 ;; Run package-install-selected-packages
-;; TODO: Add new line at the end of the file.
 
 (require 'package)
 
