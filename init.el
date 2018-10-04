@@ -19,7 +19,7 @@
  '(gofmt-command "goimports")
  '(package-selected-packages
    (quote
-    (zenburn-theme markdown-mode dockerfile-mode flymake-cursor solarized-theme go-mode typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit)))
+    (nginx-mode zenburn-theme markdown-mode dockerfile-mode flymake-cursor solarized-theme go-mode typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
