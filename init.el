@@ -16,7 +16,6 @@
  '(custom-safe-themes
    (quote
     ("bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
- '(gofmt-command "goimports")
  '(package-selected-packages
    (quote
     (nginx-mode zenburn-theme markdown-mode dockerfile-mode flymake-cursor solarized-theme go-mode typescript-mode yaml-mode flymake-haml haml-mode undo-tree ace-window avy rubocop flymake-ruby magit)))
@@ -79,11 +78,6 @@
 	    ;; Set dired-x buffer-local variables here.  For example:
 	    ;; (dired-omit-mode 1)
 	    ))
-
-(add-hook 'before-save-hook #'gofmt-before-save)
-
-(add-hook 'go-mode-hook (lambda ()
-                          (local-set-key (kbd "M-.") #'godef-jump)))
 
 (setq inhibit-splash-screen t)
 (eval-after-load 'flymake '(require 'flymake-cursor))
