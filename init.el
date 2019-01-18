@@ -18,7 +18,7 @@
     ("84890723510d225c45aaff941a7e201606a48b973f0121cb9bcb0b9399be8cba" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(package-selected-packages
    (quote
-    (nginx-mode zenburn-theme markdown-mode dockerfile-mode solarized-theme go-mode typescript-mode yaml-mode haml-mode undo-tree ace-window avy rubocop magit)))
+    (nginx-mode zenburn-theme markdown-mode dockerfile-mode solarized-theme go-mode typescript-mode yaml-mode haml-mode undo-tree ace-window avy magit)))
  '(require-final-newline t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -59,7 +59,7 @@
 
 (add-hook 'prog-mode-hook 'subword-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'ruby-mode-hook #'rubocop-mode)
+(add-hook 'ruby-mode-hook #'flymake-mode)
 
 (add-hook 'dired-load-hook
 	  (lambda ()
@@ -75,3 +75,4 @@
 	    ))
 
 (setq inhibit-splash-screen t)
+(global-display-line-numbers-mode 1)
