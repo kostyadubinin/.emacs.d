@@ -77,5 +77,20 @@
 (setq inhibit-splash-screen t)
 (global-display-line-numbers-mode 1)
 
-;; from the go-mode.el docs
+
+;;; Go
+
+;; If you want to automatically run ‘gofmt’ before saving a file,
+;; add the following hook to your emacs configuration:
 (add-hook 'before-save-hook #'gofmt-before-save)
+
+;; If you want to use ‘godef-jump’ instead of etags (or similar),
+;; consider binding godef-jump to ‘M-.’, which is the default key
+;; for ‘find-tag’:
+(add-hook ’go-mode-hook (lambda ()
+                          (local-set-key (kbd "M-.") #’godef-jump)))
+
+;; Please note that godef is an external dependency. You can install
+;; it with
+
+;; go get github.com/rogpeppe/godef
