@@ -76,3 +76,6 @@
 
 (setq inhibit-splash-screen t)
 (global-display-line-numbers-mode 1)
+
+;; from the go-mode.el docs
+(add-hook 'before-save-hook #'gofmt-before-save)
