@@ -75,8 +75,6 @@
 	    ))
 
 (setq inhibit-splash-screen t)
-(global-display-line-numbers-mode 1)
-
 
 ;;; Go
 
