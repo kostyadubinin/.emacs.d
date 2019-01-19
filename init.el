@@ -87,8 +87,8 @@
 ;; If you want to use ‘godef-jump’ instead of etags (or similar),
 ;; consider binding godef-jump to ‘M-.’, which is the default key
 ;; for ‘find-tag’:
-(add-hook ’go-mode-hook (lambda ()
-                          (local-set-key (kbd "M-.") #’godef-jump)))
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "M-.") #'godef-jump)))
 
 ;; Please note that godef is an external dependency. You can install
 ;; it with
