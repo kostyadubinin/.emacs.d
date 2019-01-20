@@ -27,8 +27,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-(server-start)
-
 (setq-default fill-column 80)
 
 (setq mac-command-modifier 'meta)
