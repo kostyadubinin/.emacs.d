@@ -36,7 +36,6 @@
 (setq backup-inhibited t)    ; disable backup
 (setq auto-save-default nil) ; disable auto save
 (setq dired-listing-switches "-alh")
-(setq flymake-start-on-flymake-mode nil)
 
 (global-set-key (kbd "C-x C-b") 'bs-show)
 (global-set-key (kbd "M-i") 'other-window)
@@ -58,7 +57,6 @@
 
 (add-hook 'prog-mode-hook 'subword-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'ruby-mode-hook #'flymake-mode)
 
 (add-hook 'dired-load-hook
 	  (lambda ()
@@ -75,7 +73,7 @@
 
 (setq inhibit-splash-screen t)
 
-;;; Go
+;;;; Go
 
 ;; If you want to automatically run ‘gofmt’ before saving a file,
 ;; add the following hook to your emacs configuration:
@@ -91,3 +89,11 @@
 ;; it with
 
 ;; go get github.com/rogpeppe/godef
+
+;;;; Flymake
+
+(setq flymake-start-on-flymake-mode nil)
+(add-hook 'ruby-mode-hook #'flymake-mode)
+(require 'flymake)
+(define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
+;; (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
