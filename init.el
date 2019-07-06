@@ -19,7 +19,8 @@
  '(package-selected-packages
    (quote
     (nginx-mode zenburn-theme markdown-mode dockerfile-mode solarized-theme go-mode typescript-mode yaml-mode haml-mode undo-tree ace-window avy magit)))
- '(require-final-newline t))
+ '(require-final-newline t)
+ '(scroll-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
