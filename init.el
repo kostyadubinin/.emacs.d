@@ -32,10 +32,9 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'control)
 (setq js-indent-level 2)
-(setq column-number-mode t)
 (setq backup-inhibited t)    ; disable backup
 (setq auto-save-default nil) ; disable auto save
-(setq dired-listing-switches "-alh")
+(setq dired-listing-switches "-lh")
 
 (global-set-key (kbd "C-x C-b") 'bs-show)
 (global-set-key (kbd "M-i") 'other-window)
@@ -43,7 +42,6 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
-(scroll-bar-mode -1)
 (icomplete-mode 99)
 (savehist-mode 1)
 (global-undo-tree-mode)
