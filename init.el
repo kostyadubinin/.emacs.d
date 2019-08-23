@@ -30,8 +30,10 @@
 
 (setq-default fill-column 80)
 
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier 'control)
+(setq mac-command-modifier 'control)
+;; (setq mac-command-modifier 'meta)
+;; (setq mac-option-modifier 'control)
+
 (setq js-indent-level 2)
 (setq backup-inhibited t)    ; disable backup
 (setq auto-save-default nil) ; disable auto save
