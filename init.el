@@ -40,7 +40,7 @@
 (setq auto-save-default nil) ; disable auto save
 (setq dired-listing-switches "-lh")
 
-(global-set-key (kbd "C-x C-b") 'bs-show)
+;; (global-set-key (kbd "C-x C-b") 'bs-show)
 (global-set-key (kbd "M-i") 'other-window)
 (global-set-key (kbd "M-p") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -50,7 +50,7 @@
 (savehist-mode 1)
 (global-undo-tree-mode)
 
-(add-to-list 'default-frame-alist '(width  . 162))
+(add-to-list 'default-frame-alist '(width  . 164))
 (add-to-list 'default-frame-alist '(height . 72	))
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -98,4 +98,3 @@
 (add-hook 'ruby-mode-hook #'flymake-mode)
 (require 'flymake)
 (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
-;; (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
