@@ -17,6 +17,18 @@
  '(custom-safe-themes
    (quote
     ("84890723510d225c45aaff941a7e201606a48b973f0121cb9bcb0b9399be8cba" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(ibuffer-formats
+   (quote
+    ((mark modified read-only locked " "
+	   (name 45 45 :left :elide)
+	   " "
+	   (size 9 -1 :right)
+	   " "
+	   (mode 18 18 :left :elide)
+	   " " filename-and-process)
+     (mark " "
+	   (name 16 -1)
+	   " " filename))))
  '(package-selected-packages
    (quote
     (csv-mode nginx-mode zenburn-theme markdown-mode dockerfile-mode solarized-theme go-mode typescript-mode yaml-mode haml-mode undo-tree ace-window avy magit)))
@@ -98,3 +110,8 @@
 (add-hook 'ruby-mode-hook #'flymake-mode)
 (require 'flymake)
 (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
+
+(add-to-list 'default-frame-alist '(font . "SF Mono-14"))
+(setq-default line-spacing 2)
+
+(global-set-key (kbd "C-x C-b") 'ibuffer)
