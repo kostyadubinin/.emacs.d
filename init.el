@@ -33,7 +33,8 @@
    (quote
     (csv-mode nginx-mode zenburn-theme markdown-mode dockerfile-mode solarized-theme go-mode typescript-mode yaml-mode haml-mode undo-tree ace-window avy magit)))
  '(require-final-newline t)
- '(scroll-bar-mode nil))
+ '(scroll-bar-mode nil)
+ '(split-width-threshold 120))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -50,7 +51,6 @@
 (setq js-indent-level 2)
 (setq backup-inhibited t)    ; disable backup
 (setq auto-save-default nil) ; disable auto save
-(setq dired-listing-switches "-lh")
 
 ;; (global-set-key (kbd "C-x C-b") 'bs-show)
 (global-set-key (kbd "M-i") 'other-window)
@@ -115,3 +115,6 @@
 (setq-default line-spacing 2)
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+(setq gofmt-command "goimports")
+(add-hook 'before-save-hook 'gofmt-before-save)
