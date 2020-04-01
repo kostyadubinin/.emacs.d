@@ -62,7 +62,7 @@
 (savehist-mode 1)
 (global-undo-tree-mode)
 
-(add-to-list 'default-frame-alist '(width  . 164))
+(add-to-list 'default-frame-alist '(width  . 120))
 (add-to-list 'default-frame-alist '(height . 72	))
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
