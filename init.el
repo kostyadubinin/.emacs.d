@@ -13,10 +13,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(csv-separators (quote ("," "	" ";")))
- '(custom-enabled-themes nil)
+ '(custom-enabled-themes (quote (zenburn)))
  '(custom-safe-themes
    (quote
-    ("84890723510d225c45aaff941a7e201606a48b973f0121cb9bcb0b9399be8cba" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "f2c35f8562f6a1e5b3f4c543d5ff8f24100fae1da29aeb1864bbc17758f52b70" "84890723510d225c45aaff941a7e201606a48b973f0121cb9bcb0b9399be8cba" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(ibuffer-formats
    (quote
     ((mark modified read-only locked " "
@@ -31,8 +31,9 @@
 	   " " filename))))
  '(package-selected-packages
    (quote
-    (csv-mode nginx-mode zenburn-theme markdown-mode dockerfile-mode solarized-theme go-mode typescript-mode yaml-mode haml-mode undo-tree ace-window avy magit)))
+    (flycheck csharp-mode swift-mode lua-mode csv-mode nginx-mode zenburn-theme markdown-mode dockerfile-mode solarized-theme go-mode typescript-mode yaml-mode haml-mode undo-tree ace-window avy magit)))
  '(require-final-newline t)
+ '(ring-bell-function (quote ignore))
  '(scroll-bar-mode nil)
  '(split-width-threshold 120))
 (custom-set-faces
@@ -61,8 +62,9 @@
 (icomplete-mode 99)
 (savehist-mode 1)
 (global-undo-tree-mode)
+(keyboard-translate ?\C-h ?\C-?)
 
-(add-to-list 'default-frame-alist '(width  . 120))
+(add-to-list 'default-frame-alist '(width  . 167))
 (add-to-list 'default-frame-alist '(height . 72	))
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
